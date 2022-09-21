@@ -4,7 +4,8 @@
 Return an int array length 3 containing the first 3 digits of pi, {3, 1, 4}.
 """
 def make_pi():
-    
+  arr = [3,1,4]
+  return arr
 
 # test cases: do not edit
 print(make_pi()) # [3, 1, 4]

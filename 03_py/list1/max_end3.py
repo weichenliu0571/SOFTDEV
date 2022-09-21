@@ -6,7 +6,10 @@ element in the array, and set all the other elements to be that value. Return
 the changed array.
 """
 def max_end3(nums):
-    
+  maxa = max(nums[0],nums[-1])
+  for x in range(len(nums)):
+    nums[x] = maxa
+  return nums
 
 # test cases: do not edit
 print(max_end3([1, 2, 3])) # [3, 3, 3]

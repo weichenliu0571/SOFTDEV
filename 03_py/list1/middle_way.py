@@ -5,7 +5,10 @@ Given 2 int arrays, a and b, each length 3, return a new array length 2
 containing their middle elements.
 """
 def middle_way(a, b):
-    
+  mid_a = a[1]
+  mid_b = b[1]
+  ans = [mid_a,mid_b]
+  return ans
 
 # test cases: do not edit
 print(middle_way([1, 2, 3], [4, 5, 6])) # [2, 5]

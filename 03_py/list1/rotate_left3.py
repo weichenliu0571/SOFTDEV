@@ -5,7 +5,11 @@ Given an array of ints length 3, return an array with the elements "rotated
 left" so {1, 2, 3} yields {2, 3, 1}.
 """
 def rotate_left3(nums):
-    
+  first = nums[0]
+  middle = nums[1]
+  last = nums[-1]
+  arr = [middle,last,first]
+  return arr
 
 # test cases: do not edit
 print(rotate_left3([1, 2, 3])) # [2, 3, 1]

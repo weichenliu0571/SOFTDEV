@@ -6,7 +6,10 @@ last elements from the original array. The original array will be length 1 or
 more.
 """
 def make_ends(nums):
-    
+  first = nums[0]
+  last = nums[-1]
+  ans = [first,last]
+  return ans 
 
 # test cases: do not edit
 print(make_ends([1, 2, 3])) # [1, 3]
