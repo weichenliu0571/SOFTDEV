@@ -1,8 +1,8 @@
 # Ryan Lau WeiChen Liu Daniel Liu
-#SoftDev
-#K04-DictWord
-#2022-09-22
-#Time Spent: 0.4 Hour
+# SoftDev
+# K04-DictWord
+# 2022-09-22
+# time spent: 0.8 hrs
 
 
 """
@@ -37,9 +37,6 @@ def select_random_period():
 def select_random_student(period):
     return random.choice(krewes[period])
 
-def read_file(file):
-    file_contents = open(file,"r")
-    
-#print(select_random_period())
-print(select_random_student(select_random_period()))
-    
+period = select_random_period()
+student = select_random_student(period)
+print(student + " of period " + str(period) + " was randomly chosen")
