@@ -11,7 +11,6 @@ import random
 
 file1 = open("krewes.txt", 'r')
 krewes = file1.read()
-print(krewes)
 
 classes = {2:[],7:[],8:[]}
 
