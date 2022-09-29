@@ -1,23 +1,37 @@
+'''
+Erasers :: Weichen Liu, Faiza
+SoftDev
+K05 -- reading and using a file
+2022-09-28
+time spent: 0.3 hrs
+'''
+
 
 import random
 
 file1 = open("krewes.txt", 'r')
-str1 = file1.read()
-print(str1)
+krewes = file1.read()
+print(krewes)
 
-pd = ["2", "7", "8"]
-for i in range(pd):
-    while (str1.find(i) != -1):
-        indiv
+classes = {2:[],7:[],8:[]}
 
-def select_random_period():
-    periods = list(krewes.keys())
-    return random.choice(periods)
+def _sort():
+    krewes1 = krewes.split('$$$')
+    for i in krewes1:
+        pd = i[0]
+        ans = i.split('@@@')
+        '''TESTING print(ans) '''
+        _name = ans[1]
+        _ducky = ans[2]
+        classes[int(pd)].append([_name, _ducky])
+    return
 
-def select_random_student(period):
-    return random.choice(krewes[period])
-'''
-period = select_random_period()
-student = select_random_student(period)
-print(student + " of period " + str(period) + " was randomly chosen")
-'''
+def _random():
+    pd = random.choice(list(classes.keys()))
+    names = random.choice(classes[pd])
+
+    return (f"{pd} : {names[0]} : {names[1]}")
+
+
+_sort()
+print(_random())
