@@ -1,9 +1,15 @@
 '''
-Erasers :: Weichen Liu, Faiza
+Erasers :: Weichen, Faiza
 SoftDev
 K05 -- reading and using a file
 2022-09-28
 time spent: 0.3 hrs
+
+DISCO: 
+- We have to make a new variable that contains the list of the elements we split off the previous string
+
+DISCO:
+- Why do we have to make that new variable?
 '''
 
 
