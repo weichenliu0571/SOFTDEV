@@ -6,7 +6,7 @@ K05 -- reading and using a file
 time spent: 0.3 hrs
 
 DISCO: 
-- We have to make a new variable that contains the list of the elements we split off the previous string
+- We have to make a new variable that contains the list of the elements we split off in the previous string
 
 DISCO:
 - Why do we have to make that new variable?
@@ -22,7 +22,7 @@ classes = {2:[],7:[],8:[]}
 
 def _sort():
     krewes1 = krewes.split('@@@')
-    for i in krewes1:
+    for i in krewes.split('@@@'):
         ans = i.split('$$$')
         '''TESTING print(ans) '''
         _pd = ans[0]
@@ -33,6 +33,8 @@ def _sort():
 
 def _random():
     pd = random.choice(list(classes.keys()))
+    while len(classes[pd]) == 0:
+        pd = random.choice(list(classes.keys()))
     names = random.choice(classes[pd])
 
     return (f"{pd} : {names[0]} : {names[1]}")
