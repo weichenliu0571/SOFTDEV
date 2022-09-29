@@ -16,14 +16,14 @@ print(krewes)
 classes = {2:[],7:[],8:[]}
 
 def _sort():
-    krewes1 = krewes.split('$$$')
+    krewes1 = krewes.split('@@@')
     for i in krewes1:
-        pd = i[0]
-        ans = i.split('@@@')
+        ans = i.split('$$$')
         '''TESTING print(ans) '''
+        _pd = ans[0]
         _name = ans[1]
         _ducky = ans[2]
-        classes[int(pd)].append([_name, _ducky])
+        classes[int(_pd)].append([_name, _ducky])
     return
 
 def _random():
