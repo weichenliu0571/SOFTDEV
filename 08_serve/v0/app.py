@@ -1,6 +1,8 @@
-# Clyde 'Thluffy' Sinclair
-# SoftDev
-# Oct 2022
+# Goda (Aaron Gershkovich,Julia Lee, Weichen Liu)
+#SoftDev
+#K08
+#2022-10-04
+#Time Spent: 
 
 from flask import Flask
 app = Flask(__name__) # ...
