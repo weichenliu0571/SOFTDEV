@@ -13,15 +13,17 @@ DISCO
 - The debugger is activated and we are given a pin for the debugger.
 - If you set the variable __name__ equal to a random string that isn't __main__ 
 the file doesn't run, but also doesn't return an error message.
-
+- We could not change the route from the main root to another directory.
 '''
+
 from flask import Flask
 
 app = Flask(__name__) #create instance of class Flask
 
 # __name__ = "A"
+#__name__ = "/Jeff/"
 
-@app.route("/")       #assign fxn to route
+@app.route("/Jeff/")       #assign fxn to route
 def hello_world():
     print("the __name__ of this module is... ")
     print(__name__)
