@@ -1,9 +1,6 @@
 import random
 from flask import Flask
-total = occ_dict["Total"]
-occ_dict.pop("Total")
-
-
+total = 0.0
 def readfile(f):
     with open(f,"r") as a:
         return a.read()
@@ -30,9 +27,9 @@ def pick_random_occupation(occ_dict):
         if num < 0:
             return occ
 
-
 occ_dict = generate_occupation_dict(readfile("occupations.csv"))
-_occupation = pick_random_occupation(occ_dict)
+total = occ_dict["Total"]
+occ_dict.pop("Total")
 
 app = Flask(__name__) #create instance of class Flask
 
@@ -40,8 +37,7 @@ app = Flask(__name__) #create instance of class Flask
 def hello_world():
     print("the __name__ of this module is... ")
     print(__name__)
-    return pick_random_occupation(occ_dict)
-
+    return pick_random_occupation(occ_dict) 
 if __name__ == "__main__":  # true if this file NOT imported
     app.debug = True        # enable auto-reload upon code change
     app.run()
