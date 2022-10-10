@@ -27,6 +27,12 @@ def pick_random_occupation(occ_dict):
         if num < 0:
             return occ
 
+def allJobs(dict):
+    result = ""
+    for key in list(dict.keys()):
+        result += key + "; "
+    return result
+
 occ_dict = generate_occupation_dict(readfile("occupations.csv"))
 total = occ_dict["Total"]
 occ_dict.pop("Total")
@@ -37,7 +43,7 @@ app = Flask(__name__) #create instance of class Flask
 def hello_world():
     print("the __name__ of this module is... ")
     print(__name__)
-    return pick_random_occupation(occ_dict) 
+    return pick_random_occupation(occ_dict) + "<br> Jobs: <br>" + allJobs(occ_dict)
 if __name__ == "__main__":  # true if this file NOT imported
     app.debug = True        # enable auto-reload upon code change
     app.run()
