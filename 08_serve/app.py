@@ -1,3 +1,11 @@
+'''
+Goda (Aaron Gershkovich,Julia Lee, Weichen Liu)
+SoftDev
+K08
+2022-10-04
+Time Spent: 1 hr
+'''
+
 import random
 from flask import Flask
 total = 0.0
