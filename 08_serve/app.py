@@ -51,7 +51,7 @@ app = Flask(__name__) #create instance of class Flask
 def hello_world():
     print("the __name__ of this module is... ")
     print(__name__)
-    return pick_random_occupation(occ_dict) + "<br> Jobs: <br>" + allJobs(occ_dict)
+    return "<h1> GODA: Julia Lee, Weichen Liu, Aaron Gershkovich </h1>" + "<h2>" + pick_random_occupation(occ_dict) +"</h2>" + "<br> Jobs: <br>" + allJobs(occ_dict)
 if __name__ == "__main__":  # true if this file NOT imported
     app.debug = True        # enable auto-reload upon code change
     app.run()
