@@ -1,4 +1,4 @@
-## GODA (Julia Lee, Aaron Gershkovich, Weichen Liu)
+# GODA (Julia Lee, Aaron Gershkovich, Weichen Liu)
 
 ### OUTLINE
 1. First we generated a dictionary from reading occupations.csv .
