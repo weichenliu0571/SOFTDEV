@@ -3,7 +3,7 @@
 ```
 #Q0: What will happen if you remove render_template from this line? (log your prediction before you pull the trigger...)
 
-#P0: It will just break because we don't have the necessary imported function
+#P0: It will just break because we don't have the necessary imported function. The specific error is a NameError.
 
 #Q1: Can all of your teammates confidently predict the URL to use to load this page?
 
@@ -13,3 +13,7 @@
 
 #P2: The first arguement is the html file template. The second and third arguement replace variables in the template with values. 
 ```
+
+## DISCO
+
+* The html files in /templates/ is used in the python code as a reference, but is not what is actually being displayed.
