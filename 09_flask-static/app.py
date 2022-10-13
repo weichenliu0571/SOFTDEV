@@ -1,7 +1,10 @@
-# Clyde 'Thluffy' Sinclair
-# SoftDev
-# Oct 2022
-
+'''
+Goda (Aaron Gershkovich,Julia Lee, Weichen Liu)
+SoftDev
+K09
+2022-10-04
+Time Spent: 1 hr
+'''
 # DEMO 
 # basics of /static folder
 
