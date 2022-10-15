@@ -1,6 +1,10 @@
-# Clyde 'Thluffy' Sinclair
-# SoftDev
-# Oct 2022
+'''
+Goda (Aaron Gershkovich,Julia Lee, Weichen Liu)
+SoftDev
+K11 - Working with front end back end
+2022-10-13
+Time Spent: .5 hrs
+'''
 
 from flask import Flask             #facilitate flask webserving
 from flask import render_template   #facilitate jinja templating
