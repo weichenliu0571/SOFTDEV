@@ -1,10 +1,8 @@
-'''
-AEIOU (Vansh, Weichen, Brian)
-SoftDev
-K12 - Working with front end back end
-2022-10-17
-Time Spent: .5 hrs
-'''
+# Brian, Vansh, Weichen
+# SoftDev
+# K12 -- Take and Give
+# 2022-10-17
+# time spent: 30 mins
 
 from flask import Flask             #facilitate flask webserving
 from flask import render_template   #facilitate jinja templating
@@ -32,31 +30,23 @@ PROTIP: Insert your own in-line comments
    understand what is going on.
 '''
 
-'''
-PREDICTIONS:
-- render_template('login.html') will display the login.html file.
-- Under the text will be a space for us to enter an input.
-- After we give an input, the authentication page will be displayed.
-- print(request), print(request.args), and print(request.headers) may be printed in the terminal
-
-
-'''
-
 @app.route("/") #, methods=['GET', 'POST'])
 def disp_loginpage():
     print("\n\n\n")
     print("***DIAG: this Flask obj ***")
     print(app)
     print("***DIAG: request obj ***")
-    print(request) 
+    print(request)
     print("***DIAG: request.args ***")
     print(request.args)
+    #print("***DIAG: request.args['username']  ***")
+    #print(request.args['username'])
     print("***DIAG: request.headers ***")
     print(request.headers)
     return render_template( 'login.html' )
 
 
-@app.route("/auth") # , methods=['GET', 'POST'])
+@app.route("/auth", methods=['GET', 'POST'])
 def authenticate():
     print("\n\n\n")
     print("***DIAG: this Flask obj ***")
@@ -69,10 +59,15 @@ def authenticate():
     #print(request.args['username'])
     print("***DIAG: request.headers ***")
     print(request.headers)
-    return "Waaaa hooo HAAAH"  #response to a form submission
+    if request.method == 'POST':
+        username = request.form.get('username')
+        return render_template('response.html',
+            username=username)  
+    return render_template('login.html')
 
 
     
+
 if __name__ == "__main__": #false if this file imported as module
     #enable debugging, auto-restarting of server when this file is modified
     app.debug = True 
