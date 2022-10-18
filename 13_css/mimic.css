@@ -1,1 +1,25 @@
+html {
+    background-color: #666666;
+}
 
+h1 {
+    text-align: center;
+    color: white;
+    background-color: #bebebe;
+}
+
+#navbar {
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+}
+
+#text { 
+    display: flex;
+}
+
+
+
+#block {
+    background-color: #767676;
+}
