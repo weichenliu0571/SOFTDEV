@@ -4,7 +4,7 @@
 # 2022-11-03
 # time spent : 0.5 hrs
 
-flask import Flask, redirect, url_for, render_template, request, session
+from flask import Flask, redirect, url_for, render_template, request, session
 
 app = Flask(__name__)
 
