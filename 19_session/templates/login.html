@@ -1,4 +1,12 @@
 <!DOCTYPE html>
+<!-- 
+ Brian, Vansh, Weichen
+ SoftDev
+ K19 -- Sessions Greetings
+ 2022-11-03 
+ time spent: 30 mins
+ -->
+
 
 <html>
 
@@ -10,21 +18,21 @@
     <h1>
       Welcome, Travelers of the Intertoobz!
     </h1>
+    <h1>Team AEIOU</h1>
+    Brian Chen, Vansh Saboo, Weichan Liu
 
     <h3>
       Enter your username below to proceed.
     </h3>
-    <form action="#" method = "POST">
+    <form action="/auth">
       <input type="text" name="username" style="margin-bottom:10px">
       <br>
-      <input type="text" name="password" style="margin-bottom:10px">
+      <input type="password" name="password" style="margin-bottom:10px">
+      <br>
+      {{ error }}
       <br>
       <input type="submit">
     </form>
-
-    <h3>
-      {{error}}
-    </h3>
   </body>
 
 </html>
