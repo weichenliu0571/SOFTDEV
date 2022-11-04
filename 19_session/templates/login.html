@@ -30,15 +30,17 @@
     <h3>
       Enter your username below to proceed.
     </h3>
-    <form action="/auth">
+    <form action="#" method = "POST">
       <input type="text" name="username" style="margin-bottom:10px">
       <br>
-      <input type="password" name="password" style="margin-bottom:10px">
-      <br>
-      {{ error }}
+      <input type="text" name="password" style="margin-bottom:10px">
       <br>
       <input type="submit">
     </form>
+
+    <h3>
+      {{error}}
+    </h3>
   </body>
 
 </html>
