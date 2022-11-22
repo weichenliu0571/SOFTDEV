@@ -23,8 +23,9 @@ def hello():
     print(_data)
 
     image = json.loads(_data)["url"]
+    explanation = json.loads(_data)["explanation"]
 
-    return render_template("main.html", image = image)
+    return render_template("main.html", image = image, explanation = explanation)
 
 if __name__ == '__main__':
     app.debug = True
