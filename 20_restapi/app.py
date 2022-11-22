@@ -4,7 +4,7 @@
 # 2022-11-21
 # time spent: .5 hrs
 
-from flask import Flask, escape, request, render_template
+from flask import Flask, render_template
 import urllib3
 import json
 
