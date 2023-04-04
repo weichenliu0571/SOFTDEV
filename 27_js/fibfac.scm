@@ -1,11 +1,19 @@
-;Team Phantom Tollbooth :: Clyde Sinclair, Fierce Dragon
-;SoftDev pd0
+;Keychon K23 :: Jeff Chen, Weichen Liu
+;SoftDev pd8
 ;K27 -- Basic functions in JavaScript
-;2023-04-03t
+;2023-04-04t
 
 ;Scheme Antecedents for JS work
 
 ;factorial:
+
+(define
+  fact (lambda (n)
+  (if (< n 2)
+      1
+      (* n (fact(- n 1))
+  ))))
+
 ;<your team's fact(n) implementation>
 
 ;(fact 1) ;"...should be  1"
@@ -16,6 +24,14 @@
 
 
 ;fib:
+
+(define
+  fib (lambda (n)
+  (if (or (= n 1) (= n 0))
+      n
+      (+ (fib(- n 1)) (fib(- n 2)))
+  )))
+  
 ;<your team's fib(n) implementation>
 
 ;(fib 0) ;"...should be  0"
