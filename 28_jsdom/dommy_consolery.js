@@ -1,27 +1,7 @@
-/*
-   your PPTASK:
-   
-   Test drive each bit of code in this file,
-    and insert comments galore, indicating anything
-     you discover,
-    	have questions about,
-    		or otherwise deem notable.
-    		
-    		Write with your future self or teammates in mind.
-    		
-    		If you find yourself falling out of flow mode, consult 
-    		other teams
-    		MDN
-
-   A few comments have been pre-filled for you...
-   
-   (delete this block comment once you are done)
-*/
-
-// Team Phantom Tollbooth :: Clyde Sinclair, Fierce Dragon 
-// SoftDev pd0
+// Team Keychon K23 :: Jeff Chen, Weichen Liu
+// SoftDev pd8
 // K28 -- Getting more comfortable with the dev console and the DOM
-// 2023-04-05w
+// 2023-04-17m
 // --------------------------------------------------
 
 
@@ -86,8 +66,37 @@ var stripe = function() {
 
 //insert your implementations here for...
 // FIB
+function fact(n) {
+    if (n < 2) return 1;
+    return n * fact(n-1);
+}
+
 // FAC
+function fib(n) {
+    if (n === 0) return 0;
+    if (n === 1) return 1;
+    return fib(n - 1) + fib(n - 2);
+}
+
 // GCD
+function GCD(a, b) {
+    if (b === 0) return a;
+    return GCD(b, a % b);
+}
+//changes all items in list to GCD of 4 and 60
+document.querySelectorAll('li').forEach((e) => {
+    e.innerHTML = '' + GCD(4, 60);
+});
+
+//changes all items in list that's blue to fib of 4
+document.querySelectorAll('.blue').forEach((e) => {
+    e.innerHTML = '' + fib(4);
+});
+
+//changes all items in list that has red class to fact of 4
+document.querySelectorAll('.red').forEach((e) => {
+    e.innerHTML = '' + fact(4);
+});
 
 // In addition to the style shown above,
 //  you are encouraged to test drive the "arrow function syntax" as shown below.
@@ -96,5 +105,3 @@ const myFxn = (param1, param2) => {
   // body
   return retVal;
 };
-
-
