@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en">
+  <!-- HTML file for exploring JavaScript interactions with the DOM -->
+
+  <head>
+    <meta charset="utf-8">
+    <style>
+      .red   {color : #ff0000;}
+      .green {color : #00ff00;}
+      .blue  {color : #0000ff;}
+    </style>
+  </head>
+
+  <body>
+    <h1 id="h" class="blue">Hello World!</h1>
+
+    <div id="div1" class="green">This is a div</div>
+    <div id="div2">This is a second div</div>
+    <div class="blue">This is a toid div</div>
+
+    <ol id="thelist">
+      <li class="" id="li0">item 0</li>
+      <li class="green blue" id="li1">item 1</li>
+      <li class="green blue" id="li2">item 2</li>
+      <li class="red green blue" id="li3">item 3</li>
+      <li class="red green blue" id="li4">item 4</li>
+      <li class="green blue" id="li5">item 5</li>
+      <li class="green blue" id="li6">item 6</li>
+      <li class="" id="li7">item 7</li>
+    </ol>
+
+    <button id="fib">Run FIB</button>
+    <button id="fact">Run FACT</button>
+    <button id="gcd">Run GCD</button>
+
+    <br><br>
+
+    Fib of:
+    <input type="text" id="fib-input">
+    <button type="submit" id="fib-submit">submit</button>
+    <div id="fib-output"></div>
+    <br><br>
+    
+    Fact of:
+    <input type="text" id="fact-input">
+    <button type="submit" id="fact-submit">submit</button>
+    <div id="fact-output"></div>
+    <br><br>
+
+    GCD of:
+    <input type="text" id="gcd-input"> and <input type="text" id="gcd-input2">
+    <button type="submit" id="gcd-submit">submit</button>
+    <div id="gcd-output"></div>
+
+
+    <script src="dommy_consolery.js"></script>
+
+  </body>
+</html>
