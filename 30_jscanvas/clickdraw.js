@@ -19,10 +19,17 @@ var toggleMode = (e) => {
 }
 
 var drawRect = function(e) {
+    var mouseX = e.offsetX //gets X-coor of mouse when event is fired
+    var mouseY = e.offsetY //gets Y-coor of mouse when event is fired
+    console.log("mouseclick registered at ", mouseX, mouseY)
+    ctx.fillRect(mouseX, mouseY, 10, 10)
+}
+
+var drawCircle = function(e) {
     var mouseX = e.clientX //gets X-coor of mouse when event is fired
     var mouseY = e.clientY //gets Y-coor of mouse when event is fired
     console.log("mouseclick registered at ", mouseX, mouseY)
-    ctx.fillRect(mouseX, mouseY, 10, 10)
+    ctx.arc(mouseX, mouseY, 10, 10)
 }
 
 c.addEventListener("click", drawRect) //passes the mouse event as parameter for the function
