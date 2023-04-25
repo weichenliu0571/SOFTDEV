@@ -11,18 +11,17 @@ var mode = "rect";
 var toggleMode = (e) => {
     console.log("toggling...");
     if (mode === "rect") {
-        mode = "circ"
-    }
-    else {
-        mode = "rect"
+        mode = "circ";
+    } else {
+        mode = "rect";
     }
 }
 
-var drawRect = function(e) {
-    var mouseX = e.offsetX //gets X-coor of mouse when event is fired
-    var mouseY = e.offsetY //gets Y-coor of mouse when event is fired
-    console.log("mouseclick registered at ", mouseX, mouseY)
-    ctx.fillRect(mouseX, mouseY, 10, 10)
+var drawRect = (e) => {
+    var mouseX = e.offsetX; //gets X-coor of mouse when event is fired
+    var mouseY = e.offsetY; //gets Y-coor of mouse when event is fired
+    console.log("mouseclick registered at ", mouseX, mouseY);
+    ctx.fillRect(mouseX, mouseY, 15, 20);
 }
 
 var drawCricle = (e) => {
@@ -35,4 +34,21 @@ var drawCricle = (e) => {
     ctx.fill();
 }
 
-c.addEventListener("click", drawRect) //passes the mouse event as parameter for the function
+var draw = (e) => {
+    if (mode === "rect") {
+        drawRect(e);
+    } else {
+        drawCricle(e);
+    }
+}
+
+var wipeCanvas = () => {
+
+}
+
+
+c.addEventListener("click", draw);
+var bToggler = document.getElementById("buttonToggle");
+bToggler.addEventListener("click", toggleMode);
+var clearB = document.getElementById("buttonClear");
+clearB.addEventListener("click", wipeCanvas)
