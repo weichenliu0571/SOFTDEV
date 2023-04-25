@@ -25,11 +25,14 @@ var drawRect = function(e) {
     ctx.fillRect(mouseX, mouseY, 10, 10)
 }
 
-var drawCircle = function(e) {
-    var mouseX = e.clientX //gets X-coor of mouse when event is fired
-    var mouseY = e.clientY //gets Y-coor of mouse when event is fired
-    console.log("mouseclick registered at ", mouseX, mouseY)
-    ctx.arc(mouseX, mouseY, 10, 10)
+var drawCricle = (e) => {
+    var mouseX = e.offsetX;
+    var mouseY = e.offsetY;
+    console.log("mouseclick registered at ", mouseX, mouseY);
+    ctx.beginPath();
+    ctx.arc(mouseX, mouseY, 10, 0, 2*Math.PI);
+    ctx.stroke();
+    ctx.fill();
 }
 
 c.addEventListener("click", drawRect) //passes the mouse event as parameter for the function
