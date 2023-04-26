@@ -1,0 +1,10 @@
+Nakib Abedin, Weichen Liu
+SoftDev pd8
+K31 -- animation in canvas JS
+2023-04-26w
+
+DISCO
+- We set requestID = window.requestAnimationFrame(drawDot) after we cancel animation frames
+
+QCC
+- None
