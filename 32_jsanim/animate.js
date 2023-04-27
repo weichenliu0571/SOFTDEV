@@ -20,35 +20,33 @@ var growing = true;
 
 var dvdLogoSetup = function() {
     window.cancelAnimationFrame( requestID );
-    var rectWidth = 600;
-    var rectHeight = 400;
+    var rectWidth = 60;
+    var rectHeight = 40;
     
-    var rectX = Math.random() * 500;
-    var recty = Math.random() * 500;
+    var rectX = (Math.random() * (500));
+    var rectY = (Math.random() * (500));
 
-    var xVel = 10;
-    var yVel = 10;
+    var xVel = (Math.random() * (5) - 2);
+    var yVel = (Math.random() * (5) - 2);
 
     var logo = new Image();
     logo.src = "logo_dvd.jpg";
 
     var dvdLogo = function() {
-        ctx.clearRect(0,0,c.width,c.height);
-        //ctx.fillRect(rectx, rectY, rectWidth, rectHeight);
-        ctx.drawImage(logo, rectX, rectY, rectWidth, rectHeight);
-        if (rectX = 500) {
-            xVel = xVel * -1;
+        ctx.clearRect(0, 0, c.width, c.height );
+        ctx.drawImage( logo, rectX, rectY, rectWidth, rectHeight);
+        if (rectY <= 0 || rectY >= c.height - rectHeight ){
+            yVel = -yVel;
         }
-        if (rectY = 500) {
-            yVel = yVel * -1;
+        if (rectX <= 0 || rectX >= c.width - rectWidth ){
+            xVel = -xVel;
         }
         rectX = rectX + xVel;
-        rectY = rectX + yVel;
-        window.cancelAnimationFrame(requestID);
+        rectY = rectY + yVel;
         requestID = window.requestAnimationFrame(dvdLogo);
         };
     dvdLogo();
-}
+};
 
 // // drawCircle command taken from k30 with added parameter r
 // var drawCircle = (e, r) => {
@@ -73,27 +71,22 @@ var drawDot = () => {
     window.requestAnimationFrame()
     */
     // ctx.clearRect(0, 0, c.width, c.height);
-    clear();
-    if(radius === c.height / 2){
-        // The circle would have touched the edge
-        growing = false;
-    }else if (radius === 0){
-        // The circle finished contracting
-        growing = true;
-    }
-    if(growing)radius++;
-    else radius--;
-
-
-    ctx.beginPath();
-    ctx.arc(c.height/2,c.width/2, radius, 0, Math.PI * 2);
-    ctx.stroke();
-    ctx.fill();
-
-
-    window.cancelAnimationFrame(requestID);
-    requestID = window.requestAnimationFrame(drawDot);
-
+    ctx.clearRect(0, 0, c.width, c.height);
+    if(radius === c.height / 2) {growing = false}
+    if(radius === 0) {growing = true}
+        if (growing){
+            radius++;
+        }
+        else{
+            radius--;
+        }
+        console.log(radius);
+        ctx.beginPath();
+        ctx.arc(c.width / 2, c.height / 2, radius, 0, Math.PI * 2);
+        ctx.stroke();
+        ctx.fill();
+        window.cancelAnimationFrame(requestID);
+        requestID = window.requestAnimationFrame(drawDot);
 }
 
 var stopIt = () => {
