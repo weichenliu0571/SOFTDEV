@@ -30,5 +30,5 @@ for (x=0; x < trs.length; x++) {
   //trs[x].addEventListener('click', clicky, false);
 }
 
-table.addEventListener('click', clicky, true);
+table.addEventListener('click', clicky, false);
 //table.addEventListener('click', clicky, false);
