@@ -31,5 +31,5 @@ Prediction: Since all of events have true as their boolean, the order will be no
 that is going from top to bottom. 
 
 WHat actually happened:
-whichever last event down the list had true as their boolean was first in the stack to appear.
+whichever most inclusive element down the list had true as their boolean was first in the stack to appear.
 True adds events to stacks. 
