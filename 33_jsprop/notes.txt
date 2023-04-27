@@ -1,0 +1,33 @@
+Weichen Liu
+SoftDev pd8
+K33 -- JSPROP
+2023-04-28f
+time spent: 
+
+DISCO:
+
+1)
+Prediction: sends some sort of alert after a click happens
+What actually happened: Based on what box in the 2d array is clicked, a popup containing the contents of the 2d array is given.
+
+2) 
+Prediction: A popup with both the content of the box you clicked on and also the first element of every row is popped up.
+What actually happened: a popup of the content of what is in the tags <td> pops up, 
+the entire contents inside the <tr> pops up including the <>,
+and the contents of whats inside the <body> pops up including the <>.
+
+3)
+Prediction: 
+Q1) The clicks will trigger nothing.
+Q2) The boolean will turn off or on of the event being triggered. 
+Q3) Contents of cells will pop up first, then that of rows.
+
+What actually happened:
+e.stopPropagation() is stopping the flow
+The boolean true allows for priority of what is popped up
+
+4)
+Prediction: Since all of events have true as their boolean, the order will be normal,
+that is going from top to bottom. 
+
+WHat actually happened:
